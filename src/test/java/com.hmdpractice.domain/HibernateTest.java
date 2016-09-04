@@ -35,7 +35,7 @@ public class HibernateTest {
         Session session = sessionFactory.getCurrentSession();
 
         Customer customer = new Customer();
-        customer.setFirstname("Nourish");
+        customer.setFirstName("Nourish");
         customer.setLastName("Khan");
         customer.setEmail("nk@gmail.com");
 
