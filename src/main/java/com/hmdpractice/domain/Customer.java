@@ -4,7 +4,7 @@ package com.hmdpractice.domain;
 
 public class Customer{
     private  Long id;
-    private String firstname;
+    private String firstName;
     private String lastName;
     private String email;
 
@@ -17,11 +17,11 @@ public class Customer{
     }
 
     public String getFirstname() {
-        return firstname;
+        return firstName;
     }
 
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.firstName = firstname;
     }
 
     public String getLastName() {
