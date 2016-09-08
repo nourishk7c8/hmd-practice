@@ -5,7 +5,7 @@
   <artifactId>storefront</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>storefront Maven Webapp</name>
+  <itemName>storefront Maven Webapp</itemName>
   <url>http://maven.apache.org</url>
 
   <dependencies>

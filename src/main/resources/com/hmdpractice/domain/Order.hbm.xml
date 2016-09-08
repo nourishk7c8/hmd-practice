@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hmdpractice.domain.Order" table="CUST_ORDER">
+        <id name="id" column="CUST_ORDER_ID" type="long">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="sequence_name">ORDER_SEQ</param>
+            </generator>
+        </id>
+
+        <many-to-one name="customer"
+                     class = "com.hmdpractice.domain.Customer"
+                     column = "CUSTOMER_ID"
+                     not-null="true"
+                     cascade="save-update"/>
+
+        <set name = "orderItemSet" cascade="all" inverse="true">
+            <key column="CUST_ORDER_ID"/>
+            <one-to-many class="com.hmdpractice.domain.OrderItem"/>
+        </set>
+
+        <property name="dateCreated" column="DATE_CREATED" not-null="true"/>
+
+    </class>
+
+
+</hibernate-mapping>

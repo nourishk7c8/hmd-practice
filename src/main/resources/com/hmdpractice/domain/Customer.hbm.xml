@@ -10,7 +10,7 @@
             </generator>
         </id>
 
-        <property name = "firstName" column = "FIRST_NAME" type = "string" length = "255" not-null = "true"/>
+        <property name= "firstName" column = "FIRST_NAME" type = "string" length = "255" not-null = "true"/>
 
         <property name = "lastName" column = "LAST_NAME" type = "string" length = "255" not-null = "true"/>
 

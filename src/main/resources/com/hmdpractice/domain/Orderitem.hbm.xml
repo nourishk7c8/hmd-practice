@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hmdpractice.domain.OrderItem" table="ORDER_ITEM">
+        <id name="id" column="ORDER_ITEM_ID" type="long">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="sequence_name">ORDER_ITEM_SEQ</param>
+            </generator>
+        </id>
+
+        <property name = "itemName" column = "ITEM_NAME" type = "string" length = "255" not-null = "true"/>
+
+        <many-to-one name="order" class="com.hmdpractice.domain.Order" column="CUST_ORDER_ID" cascade="all"/>
+    </class>
+
+
+</hibernate-mapping>
