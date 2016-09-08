@@ -1,11 +1,20 @@
 package com.hmdpractice.domain;
 
 
+import javax.persistence.*;
 
+@Entity
+@Table(name="Customer")
 public class Customer{
+    @Id
+    @GeneratedValue
+    @Column (name="CUSTOMER_ID")
     private  Long id;
+    @Column(name = "FISRT_NAME")
     private String firstName;
+    @Column(name = "LAST_NAME")
     private String lastName;
+    @Column (name = "EMAIL")
     private String email;
 
     public Long getId() {

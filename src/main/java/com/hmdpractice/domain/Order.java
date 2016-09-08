@@ -1,16 +1,26 @@
 package com.hmdpractice.domain;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="CUSTOMER_ORDER")
 public class Order implements Serializable{
 
     //instance variables
+    @Id
+    @GeneratedValue
+    @Column(name="CUSTOMER_ORDER_ID")
     private Long id;
-    private Customer customer;
+    @Column(name="DATE_CREATED")
     private LocalDateTime dateCreated;
+    @ManyToOne
+    @JoinColumn (name="CUSTOMER_ID")
+    private Customer customer;
+    @OneToMany(mappedBy = "order")
     private Set<OrderItem> orderItemSet = new HashSet<>();
 
 

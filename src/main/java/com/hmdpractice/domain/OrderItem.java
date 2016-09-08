@@ -1,11 +1,21 @@
 package com.hmdpractice.domain;
 
+import javax.persistence.*;
+
 /**
  * Created by developer on 9/6/2016.
  */
+@Entity
+@Table(name="ORDER_ITEM")
 public class OrderItem {
+    @Id
+    @GeneratedValue
+    @Column(name="ORDER_ITEM_ID")
     private Long id;
+    @ManyToOne
+    @JoinColumn(name="CUSTOMER_ORDER_ID")
     private Order order;
+    @Column(name="ITEM_NAME")
     private String itemName;
 
     public Long getId() {
