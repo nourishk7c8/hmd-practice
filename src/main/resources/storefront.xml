@@ -26,6 +26,14 @@
         </property>
         -->
 
+        <property name="annotatedClasses">
+            <list>
+                <value>com.hmdpractice.domain.Customer</value>
+                <value>com.hmdpractice.domain.Order</value>
+                <value>com.hmdpractice.domain.OrderItem</value>
+            </list>
+        </property>
+
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</prop>
